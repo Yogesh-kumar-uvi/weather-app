@@ -1,19 +1,19 @@
 import { useState } from 'react'
 import './App.css'
 import search from './assets/icons/search.svg'
-// import { useStateContext } from './Context'
-// import { BackgroundLayout, WeatherCard, MiniCard } from './Components'
+import { useStateContext } from './Context'
+import { BackgroundLayout, WeatherCard, MiniCard } from './Components'
 
 function App() {
 
   const [input, setInput] = useState('')
-  const { weather/*, thisLocation, values, place, setPlace*/ } = useStateContext()
-  console.log(weather)
+  const { weather, thisLocation, values, place, setPlace } = useStateContext()
+  // console.log(weather)
 
-  // const submitCity = () => {
-  //   setPlace(input)
-  //   setInput('')
-  // }
+  const submitCity = () => {
+    setPlace(input)
+    setInput('')
+  }
 
   return (
     <div className='w-full h-screen text-white px-8'>
